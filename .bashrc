@@ -27,3 +27,6 @@ if [ -x /etc/profile.d/bash_completion.sh ]; then
         source /etc/profile.d/bash_completion.sh 
 fi
 
+# Yubikey SSH agent conf
+export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+gpg-connect-agent updatestartuptty /bye
